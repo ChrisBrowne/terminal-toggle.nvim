@@ -10,7 +10,7 @@ I only ever use a single terminal, and wanted a way to have just one, and to tog
 - Single terminal
 - Easy toggle on/off with a TerminalToggle ex command
 - Return back to the buffer you were last on
-- Only enter insert mode when toggling on and not via an auto command. This means that navigating through the jump list doesn't put you in insert mode and prevent you <C-o>'ing any further.
+- Only enter insert mode when toggling on and not via an auto command. This means that navigating through the jump list doesn't put you in insert mode and prevent you `<C-o>`'ing any further.
 
 ## Installation
 
@@ -36,7 +36,7 @@ Using Lazy.nvim:
 ```
 
 ## Setup
-Add the TerminalToggle command to your favourite key combo. Since I only use the terminal in nvim, I've overridden <C-z> to show this terminal rather than background nvim. You do you!
+Add the TerminalToggle command to your favourite key combo. Since I only use the terminal in nvim, I've overridden `<C-z>` to show this terminal rather than background nvim. You do you!
 
 ```lua
   vim.keymap.set({ 'n', 't' }, '<C-z>', '<cmd>TerminalToggle<CR>', { desc = 'Terminal toggle' })
