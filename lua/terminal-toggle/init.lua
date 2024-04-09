@@ -15,6 +15,7 @@ function M.terminal_toggle()
       vim.cmd 'startinsert'
     else
       vim.api.nvim_win_set_buf(0, terminal_buffer_handle)
+      vim.cmd 'startinsert'
     end
   end
 end
