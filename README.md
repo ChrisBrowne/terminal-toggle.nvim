@@ -17,19 +17,26 @@ I only ever use a single terminal, and wanted a way to have just one, and to tog
 Using Packer:
 
 ```lua
-use "ChrisBrowne/terminal-toggle.nvim"
+require("packer").startup(function()
+  use({
+    "ChrisBrowne/terminal-toggle.nvim",
+    config = function()
+      require("terminal-toggle").setup()
+    end,
+  })
+end)
 ```
 Using Lazy.nvim:
 
 ```lua
 {
-  'ChrisBrowne/terminal-toggle.nvim'
+  'ChrisBrowne/terminal-toggle.nvim',
+  opts = {},
 }
 ```
 
 ## Setup
-
-Add the TerminalToggle command to your favourite key combo. Since I only use the terminal in nvim, I've overridden <C-z> to show this terminal rather than background nvim. You do you!.
+Add the TerminalToggle command to your favourite key combo. Since I only use the terminal in nvim, I've overridden <C-z> to show this terminal rather than background nvim. You do you!
 
 ```lua
   vim.keymap.set({ 'n', 't' }, '<C-z>', '<cmd>TerminalToggle<CR>', { desc = 'Terminal toggle' })

@@ -19,8 +19,10 @@ function M.terminal_toggle()
   end
 end
 
-vim.api.nvim_create_user_command('TerminalToggle', function()
-  M.terminal_toggle()
-end, {})
+function M.setup()
+  vim.api.nvim_create_user_command('TerminalToggle', function()
+    M.terminal_toggle()
+  end, {})
+end
 
 return M
